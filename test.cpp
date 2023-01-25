@@ -12,6 +12,7 @@ int main()
     clock_t end_vec = clock();
     double time_taken_vec = double(end_vec - start_vec)/CLOCKS_PER_SEC;
     cout<<"Run time complexity: "<<time_taken_vec<<" seconds"<<endl;
+    cout<<"Memory complexity: "<<sizeof(vecPhone)<<endl;
     
     mapPhone.addContact("Deniz", "05074151758");
     clock_t start_map = clock();
@@ -19,6 +20,7 @@ int main()
     clock_t end_map = clock();
     double time_taken_map = double(end_map - start_map)/CLOCKS_PER_SEC;
     cout<<"Run time complexity: "<<time_taken_map<<" seconds"<<endl;
+    cout<<"Memory complexity: "<<sizeof(mapPhone)<<endl;
 
     umapPhone.addContact("Doğukan", "05124567890");
     clock_t start_umap = clock();
@@ -26,8 +28,10 @@ int main()
     clock_t end_umap = clock();
     double time_taken_umap = double(end_umap - start_umap)/CLOCKS_PER_SEC;
     cout<<"Run time complexity: "<<time_taken_umap<<" seconds"<<endl;
+    cout<<"Memory complexity: "<<sizeof(umapPhone)<<endl;
 
     return 0;
 }
+
 
 
