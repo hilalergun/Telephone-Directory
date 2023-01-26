@@ -30,11 +30,11 @@ string umap_phoneBook::getPhoneNumber(const string &name)
 
 string vec_phoneBook::getPhoneNumber(const string &name)
 {
-    for(auto & it: contacts_vec)
+    for(const pair<string, string> &iter : contacts_vec)
     {
-        if(it.first == name)
+        if(iter.first == name)
         {
-            return it.second;
+            return iter.second;
         }
     }
     return " ";
