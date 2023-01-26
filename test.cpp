@@ -7,31 +7,29 @@ int main()
     umap_phoneBook umapPhone;
 
     vecPhone.addContact("Kutay", "05312279343");
-    clock_t start_vec = clock();
+    auto start_vec = chrono::high_resolution_clock::now();
     cout<<vecPhone.getPhoneNumber("Kutay")<<endl;
-    clock_t end_vec = clock();
-    double time_taken_vec = double(end_vec - start_vec)/CLOCKS_PER_SEC;
-    cout<<"Run time complexity: "<<time_taken_vec<<" seconds"<<endl;
+    auto end_vec= chrono::high_resolution_clock::now();
+    chrono::duration<double> time_vec = end_vec - start_vec;
+    cout<<"Run time complexity: "<<time_vec.count()<<" seconds"<<endl;
     cout<<"Memory complexity: "<<sizeof(vecPhone)<<endl;
     
     mapPhone.addContact("Deniz", "05074151758");
-    clock_t start_map = clock();
+    auto start_map = chrono::high_resolution_clock::now();
     cout<<mapPhone.getPhoneNumber("Deniz")<<endl;
-    clock_t end_map = clock();
-    double time_taken_map = double(end_map - start_map)/CLOCKS_PER_SEC;
-    cout<<"Run time complexity: "<<time_taken_map<<" seconds"<<endl;
-    cout<<"Memory complexity: "<<sizeof(mapPhone)<<endl;
+    auto end_map = chrono::high_resolution_clock::now();
+    chrono::duration<double> time_map = end_map - start_map;
+    cout<<"Run time complexity: "<<time_map.count()<<" seconds"<<endl;
+    cout<<"Memory compexity: "<<sizeof(mapPhone)<<endl;
 
     umapPhone.addContact("Doğukan", "05124567890");
-    clock_t start_umap = clock();
+    auto start_umap = chrono::high_resolution_clock::now();
     cout<<umapPhone.getPhoneNumber("Doğukan")<<endl;
-    clock_t end_umap = clock();
-    double time_taken_umap = double(end_umap - start_umap)/CLOCKS_PER_SEC;
-    cout<<"Run time complexity: "<<time_taken_umap<<" seconds"<<endl;
+    auto end_umap = chrono::high_resolution_clock::now();
+    chrono::duration<double> time_umap = end_umap - start_umap;
+    cout<<"Run time complexity: "<<time_umap.count()<<" seconds"<<endl;
     cout<<"Memory complexity: "<<sizeof(umapPhone)<<endl;
 
     return 0;
 }
-
-
 
