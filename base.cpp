@@ -1,5 +1,7 @@
 #include"base.h"
 
+using namespace std;
+
 string map_phoneBook::getPhoneNumber(const string &name)
 {
     auto it = contacts_map.find(name);
@@ -28,15 +30,11 @@ string umap_phoneBook::getPhoneNumber(const string &name)
 
 string vec_phoneBook::getPhoneNumber(const string &name)
 {
-    for(int i=0; i<contacts_vec.size(); i++)
+    for(auto & it: contacts_vec)
     {
-        if(contacts_vec[i].first == name)
+        if(it.first == name)
         {
-            return contacts_vec[i].second;
-        }
-        else
-        {
-            return " ";
+            return it.second;
         }
     }
     return " ";
@@ -54,5 +52,5 @@ void umap_phoneBook::addContact(string name, string phone)
 
 void vec_phoneBook::addContact(string name, string phone)
 {
-    contacts_vec.push_back(make_pair(name, phone));
+    contacts_vec.emplace_back(make_pair(name, phone));
 }
