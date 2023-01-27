@@ -2,16 +2,12 @@
 #include<unordered_map>
 #include<map>
 #include<vector>
-#include<chrono>
+#include<ctime>
 
 using namespace std;
 
 class phoneBook
 {
-    private:
-    string name;
-    string phoneNumber;
-
     public:
     virtual string getPhoneNumber(const string &name) = 0;
     virtual void addContact(string name, string phone) = 0;
