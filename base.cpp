@@ -52,5 +52,5 @@ void umap_phoneBook::addContact(string name, string phone)
 
 void vec_phoneBook::addContact(string name, string phone)
 {
-    contacts_vec.emplace_back(make_pair(name, phone));
+    contacts_vec.push_back(make_pair(name, phone));
 }
